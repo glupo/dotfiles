@@ -1,0 +1,23 @@
+[
+	{ "keys": ["ctrl+f4"], "command": "close_window" },
+	{ "keys": ["ctrl+q"], "command": "close_file" },
+	{ "keys": ["ctrl+shift+space"], "command": "close" },
+	{ "keys": ["ctrl+w"], "command": "expand_selection", "args": {"to": "scope"} },
+	{ "keys": ["ctrl+shift+d"], "command": "find_under_expand" },
+	{ "keys": ["ctrl+d"], "command": "duplicate_line" },
+
+	{ "keys": ["ctrl+shift+w"], "command": "exit" },	
+
+	{ "keys": ["ctrl+space"], "command": "auto_complete" },
+	{ "keys": ["ctrl+space"], "command": "replace_completion_with_auto_complete", "context":
+		[
+			{ "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
+			{ "key": "auto_complete_visible", "operator": "equal", "operand": false },
+			{ "key": "setting.tab_completion", "operator": "equal", "operand": true }
+		]
+	},
+
+	{ "keys": ["ctrl+r"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+
+	{ "keys": ["ctrl+shift+s"], "command": "auto_save" }
+]
